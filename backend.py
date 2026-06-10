@@ -1,9 +1,9 @@
 from groq import Groq
 import base64
 from dotenv import load_dotenv
-from urllib.parse import quote_plus
 import os
 import json
+from sqlitedb import save_ndf, init_db
 
 class ImageAgent:
 	def __init__(self):
@@ -51,11 +51,12 @@ class ImageAgent:
 		)
 
 		image_description = json.loads(chat_completion.choices[0].message.content)
-
+		save_ndf(image_path , image_description)
 		return image_description
 
 
 if __name__ == "__main__":
+	init_db()
 	image_agent_object = ImageAgent()
 
 	image_path = "ticket-de-caisse.jpg"

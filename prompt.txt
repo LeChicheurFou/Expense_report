@@ -2,11 +2,11 @@ Retourne UNIQUEMENT un JSON valide, sans texte supplémentaire, mais avec ligne 
  et juste vide si pas de valeur trouvée.
 Analyse l'image et retourne:
 {
-    Note_de_frais : (Oui / Non),
+    note_de_frais : (Oui / Non),
     type_de_charge: (repas-midi , repas-soir , transports , courses ...),
     compte_comptable : ( exemple compte de classe 6),
     fournisseur : (exemple : Mcdo , SNCF , Carrefour),
-    Date : (date du jour de la facture),
+    date : (date du jour de la facture),
     heure : (heure de la facture),
     montant_ttc : ... ,
     tva : ... ,
