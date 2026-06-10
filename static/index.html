@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Report AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📄 Analyse de note de frais</h1>
+
+    <div class="upload-card">
+
+        <input
+            type="file"
+            id="file"
+            accept="image/*">
+
+        <button onclick="extractData()">
+            Analyser
+        </button>
+
+    </div>
+
+    <div id="editor" class="hidden">
+
+        <div class="left-panel">
+
+            <img
+                id="preview-image"
+                alt="Aperçu du ticket">
+
+        </div>
+
+        <div class="right-panel">
+
+            <h2>Données détectées</h2>
+
+            <div id="form"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/static/app.js"></script>
+
+</body>
+</html>
